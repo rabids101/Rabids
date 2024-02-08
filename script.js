@@ -11,8 +11,8 @@ function sendMessage() {
    if(userMessage=="ZbfTZZ1"){
     
   
-    addBotMessage("prophet_muhammad_is_pedophile@mail.ru");
-         addBotMessage("E18(https://discord.gg/sTbYu7Mty2");
+    addBotMessage("eliteids.discord@mail.ru");
+         addBotMessage("IdsIsBack134@");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
