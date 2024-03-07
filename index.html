@@ -26,11 +26,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+
 }
 .top{
   position: absolute;
-  top: 5%;
+  top: -3%;
   font-family: "Kode Mono", monospace;
   font-size: 50px;
   font-weight: 500px;
@@ -126,6 +126,7 @@
   background-color: #0056b3;
 }
 
+
 @media screen and (min-width: 768px) {
   .product-box {
     flex-direction: row;
@@ -137,10 +138,39 @@
     text-align: left;
   }
 }
+.nav{
+  position: absolute;
+  top: 12%;
+  left: -12%;
 
+}
+.nav ul{
+  list-style: none;
+}
+.nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+
+}
+.nav ul li a{
+  text-decoration: none;
+  color: #FF3F3F;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+}
   </style>
 </head>
 <body>
+  <div class="nav">
+  <ul>
+  <li>  <a href="https://eliteids.netlify.app">Home</li></a>
+    <li>  <a href="assect/about.html" target="_blank">AboutUs</li></a>
+    <li> <a href="assect/contact.html" target="_blank">ContactUs</li></a>
+    <li>  <a href="assect/dcma.html" target="_blank">Dmca</li></a>
+
+  </ul>
+</div>
+  
   <h1 class="top">EliteIds</h1>
   <div class="product-box">
     <img src="appleid.jpeg" alt="Your Product">
@@ -160,6 +190,5 @@
     </div>
   </div>
 
-  
 </body>
 </html>
