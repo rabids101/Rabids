@@ -8,11 +8,11 @@ function sendMessage() {
   const userMessage = userMessageInput.value.trim();
     addUserMessage(userMessage);
     // Replace the bot's response with an actual response from your chatbot service or logic
-   if(userMessage=="Abc125El"){
+   if(userMessage=="Abc125EZ"){
     
   
     addBotMessage("eliteids.discord@mail.ru");
-         addBotMessage("E1LITEIDSS54QNS55Z4a");
+         addBotMessage("E1LITEIDSS54QNS55Z4zz");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
