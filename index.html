@@ -1,189 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-adsense-account" content="ca-pub-8672389651632870">
-  <meta charset="UTF-8">
-  
-<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7156220289446956"
-     crossorigin="anonymous"></script>
-     
-     
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
-  <title>EliteIds(paid game in free)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EliteIds (paid game in free)</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-}
-.top{
-  position: absolute;
-  top: -3%;
-  font-family: "Kode Mono", monospace;
-  font-size: 50px;
-  font-weight: 500px;
-  font-style: normal;
-}
+    .top {
+      font-family: "Kode Mono", monospace;
+      font-size: 8vw;
+      font-weight: 500;
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+    }
 
-.product-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .nav {
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.product-box img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+    .nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      margin: 0;
+    }
 
-.product-info {
-  text-align: center;
-}
+    .nav ul li {
+      margin: 10px 15px;
+    }
 
-.product-info h2 {
-  margin-top: 0;
-}
+    .nav ul li a {
+      text-decoration: none;
+      color: #FF3F3F;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 1.2em;
+    }
 
-.product-info p {
-  margin-bottom: 20px;
-}
+    .product-box, .product-box2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 40px 20px;
+      width: 90%;
+      max-width: 600px;
+    }
 
-.btn {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
+    .product-box img,
+    .product-box2 img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-.btn:hover {
-  background-color: #0056b3;
-}
-.product-box2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 90%;
-}
+    .product-info,
+    .product-info2 {
+      text-align: center;
+    }
 
-.product-box2 img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+    h2 {
+      margin: 0 0 10px;
+    }
 
-.product-info2 {
-  text-align: center;
-}
+    p {
+      margin-bottom: 20px;
+    }
 
-.product-info2 h2 {
-  margin-top: 0;
-}
+    .btn, .btn2 {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
 
-.product-info2 p {
-  margin-bottom: 20px;
-}
+    .btn:hover, .btn2:hover {
+      background-color: #0056b3;
+    }
 
-.btn2 {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
+    @media (min-width: 768px) {
+      .product-box {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+      }
 
-.btn2:hover {
-  background-color: #0056b3;
-}
-
-
-@media screen and (min-width: 768px) {
-  .product-box {
-    flex-direction: row;
-    max-width: 800px;
-  }
-
-  .product-info {
-    margin-left: 20px;
-    text-align: left;
-  }
-}
-.nav{
-  position: absolute;
-  top: 12%;
-  left: -12%;
-
-}
-.nav ul{
-  list-style: none;
-}
-.nav ul li{
-    display: inline-block;
-    margin-left: 25px;
-
-}
-.nav ul li a{
-  text-decoration: none;
-  color: #FF3F3F;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 22px;
-}
+      .product-info {
+        margin-left: 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="nav">
-  <ul>
-  <li>  <a href="https://eliteids.netlify.app">Home</li></a>
-    <li>  <a href="assect/about.html" target="_blank">AboutUs</li></a>
-    <li> <a href="assect/contact.html" target="_blank">ContactUs</li></a>
-    <li>  <a href="assect/dcma.html" target="_blank">Dmca</li></a>
 
-  </ul>
-</div>
-  
+  <div class="nav">
+    <ul>
+      <li><a href="https://eliteids.netlify.app">Home</a></li>
+      <li><a href="assect/about.html" target="_blank">About Us</a></li>
+      <li><a href="assect/contact.html" target="_blank">Contact Us</a></li>
+      <li><a href="assect/dcma.html" target="_blank">DMCA</a></li>
+    </ul>
+  </div>
+
   <h1 class="top">EliteIds</h1>
+
   <div class="product-box">
-    <img src="image/appleid.jpeg" alt="Your Product">
-    <script src="https://alwingulla.com/88/tag.min.js" data-zone="52977" async data-cfasync="false"></script>
+    <img src="image/appleid.jpeg" alt="Apple ID">
     <div class="product-info">
       <h2>ELITE APPLE ID</h2>
-      <p>You can get here premium apps and game in free.(for iphone user only)</p>
-      <a href="appleid.html"  class="btn" >Apple Id</a>
-      
+      <p>You can get here premium apps and games for free (iPhone users only).</p>
+      <a href="appleid.html" class="btn">Apple ID</a>
     </div>
   </div>
+
   <div class="product-box2">
-    <img src="image/appleid2.jpeg" alt="Your Product">
+    <img src="image/appleid2.jpeg" alt="Coming Soon">
     <div class="product-info2">
-      <h2> APPLE ID</h2>
-      <p>You can get here premium apps and game in free.(for iphone user only)</p>
-      <a href="#" class="btn2">Coming soon..</a>
+      <h2>APPLE ID</h2>
+      <p>You can get here premium apps and games for free (iPhone users only).</p>
+      <a href="#" class="btn2">Coming soon...</a>
     </div>
   </div>
 
