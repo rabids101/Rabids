@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RabIds (paid game in free)</title>
   <style>
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+    /* Reset and Base Styling */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #f2f2f2;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,17 +23,19 @@
 
     .top {
       font-family: "Kode Mono", monospace;
-      font-size: 8vw;
-      font-weight: 500;
-      margin-top: 20px;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: bold;
+      margin: 30px 0 20px;
       text-align: center;
-      color: #333;
+      color: #ff4c4c;
+      text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.3);
     }
 
+    /* ======= NAVIGATION BAR ======= */
     .nav {
       width: 100%;
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #1a1a1a;
+      box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -39,30 +46,49 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 10px;
-      margin: 0;
-    }
-
-    .nav ul li {
-      margin: 10px 15px;
+      padding: 15px 10px;
+      gap: 25px;
     }
 
     .nav ul li a {
       text-decoration: none;
-      color: #FF3F3F;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-size: 1.2em;
+      color: #ff4c4c;
+      font-size: 1.1rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
     }
 
+    .nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ff4c4c;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    /* ======= PRODUCT SECTIONS ======= */
     .product-box, .product-box2 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #fff;
-      border-radius: 10px;
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin: 40px 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+      margin: 30px 20px;
       width: 90%;
       max-width: 600px;
     }
@@ -73,6 +99,7 @@
       max-width: 300px;
       border-radius: 10px;
       margin-bottom: 20px;
+      border: 2px solid #444;
     }
 
     .product-info,
@@ -81,25 +108,32 @@
     }
 
     h2 {
-      margin: 0 0 10px;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffffff;
     }
 
     p {
+      font-size: 1rem;
       margin-bottom: 20px;
+      color: #cccccc;
     }
 
     .btn, .btn2 {
       display: inline-block;
-      background-color: #007bff;
+      background: linear-gradient(45deg, #ff3f3f, #d10000);
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
       text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .btn:hover, .btn2:hover {
-      background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
     }
 
     @media (min-width: 768px) {
@@ -111,39 +145,54 @@
 
       .product-info {
         margin-left: 20px;
+        text-align: left;
+      }
+
+      .product-box2 {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+      }
+
+      .product-info2 {
+        margin-left: 20px;
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
-  
+
+  <!-- ======= NAVIGATION BAR ======= -->
   <div class="nav">
     <ul>
-      <li><a href="https://eliteids.netlify.app">Home</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="assect/about.html" target="_blank">About Us</a></li>
       <li><a href="assect/contact.html" target="_blank">Contact Us</a></li>
-      <li><a href="assect/dcma.html" target="_blank">DMCA</a></li>
-           <li><a href="" target="_blank">Discord</a></li>
+      <li><a href="" target="_blank">Discord</a></li>
     </ul>
   </div>
 
+  <!-- ======= TITLE ======= -->
   <h1 class="top">RABIDS</h1>
 
+  <!-- ======= APPLE ID SECTION ======= -->
   <div class="product-box">
     <img src="image/appleid.jpeg" alt="Apple ID">
     <div class="product-info">
       <h2>RAB APPLE ID</h2>
-      <p>You can get here premium apps and games for free (iPhone users only).</p>
+      <p>You can get premium apps and games for free (iPhone users only).</p>
       <a href="appleid.html" target="_blank" class="btn">Apple ID</a>
     </div>
   </div>
 
+  <!-- ======= PASTE CODE SECTION ======= -->
   <div class="product-box2">
     <img src="image/pasteit.jpeg" alt="Coming Soon">
     <div class="product-info2">
       <h2>Paste Code</h2>
-      <p>After copying the code paste here to get apple id </p>
-      <a href="pasteit.html" target="_blank"  class="btn2">Paste</a>
+      <p>Paste your copied code here to get the Apple ID access.</p>
+      <a href="pasteit.html" target="_blank" class="btn2">Paste</a>
     </div>
   </div>
 
