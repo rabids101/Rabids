@@ -11,8 +11,8 @@ function sendMessage() {
        if(userMessage=="letsgo1"){
 
   
-    addBotMessage("rabidsdiscord@mail.ru");
-         addBotMessage("Dontaddyournum1(http://rabids.netlify.app)");
+    addBotMessage("idsrabdiscord@mail.ru");
+         addBotMessage("Dontaddyournum100(http://rabids.netlify.app)");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
