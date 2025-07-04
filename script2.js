@@ -8,11 +8,11 @@ function sendMessage() {
   const userMessage = userMessageInput.value.trim();
     addUserMessage(userMessage);
     // Replace the bot's response with an actual response from your chatbot service or logic
-       if(userMessage=="rabidszatw"){
+       if(userMessage=="rabidfagw"){
 
   
     addBotMessage("idsrabdiscord@mail.ru");
-         addBotMessage("Dontaddyournumm112(http://rabids.netlify.app)");
+         addBotMessage("Dontaddyournumm1612(http://rabids.netlify.app)");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
