@@ -8,7 +8,7 @@ function sendMessage() {
   const userMessage = userMessageInput.value.trim();
     addUserMessage(userMessage);
     // Replace the bot's response with an actual response from your chatbot service or logic
-       if(userMessage=="getfreids$101"){
+       if(userMessage=="rabidss$35"){
 
   
     addBotMessage("rabidsdiscord@mail.ru");
