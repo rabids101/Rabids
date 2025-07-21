@@ -12,7 +12,7 @@ function sendMessage() {
 
   
     addBotMessage("discordrabids@mail.ru");
-         addBotMessage("DontaddyournummZmhg137$(http://rabids.netlify.app)");
+         addBotMessage("DontaddyournummZmhg17$(http://rabids.netlify.app)");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
