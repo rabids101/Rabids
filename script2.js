@@ -11,8 +11,8 @@ function sendMessage() {
        if(userMessage=="rabids&85"){
 
   
-    addBotMessage("discordrabids@mail.ru");
-         addBotMessage("MFDontaddyournummZmhg88@&$(http://rabids.netlify.app)");
+    addBotMessage("locked");
+         addBotMessage("");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
