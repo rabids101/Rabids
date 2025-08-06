@@ -11,7 +11,7 @@ function sendMessage() {
        if(userMessage=="rabids&1@"){
 
   
-    addBotMessage("discordrabids@mail.ru");
+    addBotMessage("idsrab7@gmail.com");
          addBotMessage("MFDontaddyournummZmvhg80@&$(http://rabids.netlify.app)");
 
     userMessageInput.value = "";
