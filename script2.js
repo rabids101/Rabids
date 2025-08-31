@@ -12,7 +12,7 @@ function sendMessage() {
 
   
     addBotMessage("elitew991@gmail.com");
-         addBotMessage("Aggdvjsn13(Eliteids19@@&");
+         addBotMessage("E1(https://rabids.netlify.app)");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
