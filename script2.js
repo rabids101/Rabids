@@ -8,7 +8,7 @@ function sendMessage() {
   const userMessage = userMessageInput.value.trim();
     addUserMessage(userMessage);
     // Replace the bot's response with an actual response from your chatbot service or logic
-       if(userMessage=="Elite762$"){
+       if(userMessage=="Elite$"){
 
   
     addBotMessage("MaryJohnsonsnKsboFwF@icloud.com");
