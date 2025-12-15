@@ -11,8 +11,8 @@ function sendMessage() {
        if(userMessage=="Elite762$"){
 
   
-    addBotMessage("discordrabids@gmail.com");
-         addBotMessage("Ei91$(https://rabids.netlify.app/)");
+    addBotMessage("MaryJohnsonsnKsboFwF@icloud.com");
+         addBotMessage("Sangpham5321");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;

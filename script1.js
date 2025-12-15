@@ -11,8 +11,8 @@ function sendMessage() {
    if(userMessage=="Abc125EZ"){
     
   
-    addBotMessage("eliteids.discord@mail.ru");
-         addBotMessage("E1LITEIDSS54QNS55Z4zz");
+    addBotMessage("MaryJohnsonsnKsboFwF@icloud.com");
+         addBotMessage("Sangpham5321");
 
     userMessageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
