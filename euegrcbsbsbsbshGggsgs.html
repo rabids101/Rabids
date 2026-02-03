@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ELITEIDS</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(180deg, #0f2027, #203a43);
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+    }
+
+    /* TOP TEXT */
+    .top-text {
+        margin-top: 40px;
+        font-size: 14px;
+        letter-spacing: 3px;
+        opacity: 0.8;
+    }
+
+    /* FULL SIZE CARD */
+    .card {
+        margin-top: 30px;
+        width: 92%;
+        max-width: 520px;
+        min-height: 15vh;
+        background: #ffffff;
+        border-radius: 28px 28px 0 0;
+        padding: 40px 30px;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 -20px 50px rgba(0,0,0,0.5);
+    }
+
+    .title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #1f3b45;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 14px;
+        color: #7a8b92;
+        margin-bottom: 40px;
+    }
+
+    /* HIDDEN INPUTS */
+    .hidden-input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* BIG BUTTONS */
+    .btn {
+        width: 100%;
+        padding: 20px;
+        border-radius: 18px;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        background: linear-gradient(135deg, #2c5364, #1f3b45);
+        color: #fff;
+        margin-bottom: 24px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .note {
+        text-align: center;
+        font-size: 13px;
+        color: #7a8b92;
+        margin-top: auto;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="top-text">ACCOUNT DETAILS</div>
+
+<div class="card">
+    <div class="title">ELITEIDS</div>
+    <div class="subtitle">Tap to copy credentials</div>
+
+    <!-- Hidden fields -->
+    <input type="text" id="fixedId" value="YOUR_ID_HERE" class="hidden-input">
+    <input type="text" id="fixedPass" value="YOUR_PASSWORD_HERE" class="hidden-input">
+
+    <button class="btn" onclick="copyData('fixedId')">Copy ID</button>
+    <button class="btn" onclick="copyData('fixedPass')">Copy Password</button>
+
+    <div class="note">Secure • Private • Fast</div>
+</div>
+
+<script>
+    function copyData(id) {
+        const input = document.getElementById(id);
+        navigator.clipboard.writeText(input.value);
+        alert("Copied!");
+    }
+</script>
+
+</body>
+</html>
