@@ -24,6 +24,20 @@
       color: #fff;
       padding: 20px;
     }
+    .btn-wrapper{
+  width:100%;
+}
+
+.timer-text{
+  background:#ff3333;
+  color:#fff;
+  padding:18px 36px;
+  border-radius:10px;
+  font-size:1.3rem;
+  font-weight:700;
+  text-align:center;
+}
+
     h1 {
       text-align: center;
       color: #ff3333;
@@ -184,22 +198,15 @@
         <p> Minecraft and more.</p>
         
         
-        
-        <a href="eliteidsidapassva.html" target="_blank" ><button>Get ID</button></a>
+        <div class="btn-wrapper" data-link="eliteidsidapassva.html">
+  <button class="get-id-btn">Get ID</button>
+  <div class="timer-text" style="display:none;">Redirecting in 30s</div>
+</div>
+
       </div>
     </div>
 
-    <!-- Card 2 -->
     
-    <div class="card">
-      <img src="i!mage/gtaid.jpeg" alt="Code">
-      <div class="card-content">
-        <h2>locked</h2>
-        <p>
-        Gta id</p>
-        <a href="https://gplinks.co/7r7GRwL" target="_blank" ><button>Get ID2</button></a>
-      </div>
-    </div>
 <!--
     #card three
     <div class="card">
@@ -214,6 +221,7 @@
   </div>
 
   <script>
+  
     let countdown = 5;
     const btn = document.getElementById("ok-btn");
     const popup = document.getElementById("warning-popup");
@@ -249,6 +257,33 @@
   };
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/d399e4e11012df318294437c662a6ff6/invoke.js"></script>
+<script>
+const wrappers = document.querySelectorAll(".btn-wrapper");
+
+wrappers.forEach(wrapper=>{
+  const button = wrapper.querySelector(".get-id-btn");
+  const timerText = wrapper.querySelector(".timer-text");
+  const link = wrapper.getAttribute("data-link");
+
+  button.addEventListener("click",()=>{
+    button.style.display="none";
+    timerText.style.display="block";
+
+    let timeLeft = 30;
+    timerText.textContent = `Redirecting in ${timeLeft}s`;
+
+    const countdown = setInterval(()=>{
+      timeLeft--;
+      timerText.textContent = `Redirecting in ${timeLeft}s`;
+
+      if(timeLeft<=0){
+        clearInterval(countdown);
+        window.location.href = link;
+      }
+    },1000);
+  });
+});
+</script>
 
 </body>
 </html>
