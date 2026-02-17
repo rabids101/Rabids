@@ -267,36 +267,42 @@ wrappers.forEach(wrapper=>{
 
   let timeLeft = 30;
   let countdown = null;
-  let isRunning = false;
+
+  function updateText(){
+    timerText.textContent = `Redirecting in ${timeLeft}s`;
+  }
 
   function startTimer(){
-    if(isRunning) return;
-    isRunning = true;
+    if(countdown) return; // prevent multiple intervals
 
     countdown = setInterval(()=>{
-      if(!document.hidden){   // only run if tab is visible
-        timeLeft--;
-        timerText.textContent = `Redirecting in ${timeLeft}s`;
+      timeLeft--;
+      updateText();
 
-        if(timeLeft <= 0){
-          clearInterval(countdown);
-          window.location.href = link;
-        }
+      if(timeLeft <= 0){
+        clearInterval(countdown);
+        window.location.href = link;
       }
     },1000);
   }
 
+  function pauseTimer(){
+    if(countdown){
+      clearInterval(countdown);
+      countdown = null;
+    }
+  }
+
   button.addEventListener("click",()=>{
-    button.style.display="none";
-    timerText.style.display="block";
-    timerText.textContent = `Redirecting in ${timeLeft}s`;
+    button.style.display "none";
+    timerText.style.display = "block";
+    updateText();
     startTimer();
   });
 
-  // pause/resume when tab visibility changes
   document.addEventListener("visibilitychange",()=>{
     if(document.hidden){
-      isRunning = false;
+      pauseTimer();
     } else {
       startTimer();
     }
