@@ -265,22 +265,41 @@ wrappers.forEach(wrapper=>{
   const timerText = wrapper.querySelector(".timer-text");
   const link = wrapper.getAttribute("data-link");
 
+  let timeLeft = 30;
+  let countdown = null;
+  let isRunning = false;
+
+  function startTimer(){
+    if(isRunning) return;
+    isRunning = true;
+
+    countdown = setInterval(()=>{
+      if(!document.hidden){   // only run if tab is visible
+        timeLeft--;
+        timerText.textContent = `Redirecting in ${timeLeft}s`;
+
+        if(timeLeft <= 0){
+          clearInterval(countdown);
+          window.location.href = link;
+        }
+      }
+    },1000);
+  }
+
   button.addEventListener("click",()=>{
     button.style.display="none";
     timerText.style.display="block";
-
-    let timeLeft = 30;
     timerText.textContent = `Redirecting in ${timeLeft}s`;
+    startTimer();
+  });
 
-    const countdown = setInterval(()=>{
-      timeLeft--;
-      timerText.textContent = `Redirecting in ${timeLeft}s`;
-
-      if(timeLeft<=0){
-        clearInterval(countdown);
-        window.location.href = link;
-      }
-    },1000);
+  // pause/resume when tab visibility changes
+  document.addEventListener("visibilitychange",()=>{
+    if(document.hidden){
+      isRunning = false;
+    } else {
+      startTimer();
+    }
   });
 });
 </script>
